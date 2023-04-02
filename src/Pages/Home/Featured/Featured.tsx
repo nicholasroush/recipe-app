@@ -13,6 +13,7 @@ import { IngredientTags } from "../../../Components/Card/Card";
 import star from "../../../Assets/star-solid.svg";
 import { FeaturedInterface } from "../../../Utilities/Store/Slices/featuredRecipeSlice";
 import toTop from "../../../Assets/arrow-circle-up-solid.svg";
+import { Toast } from "../../../Components/Toast/Toast";
 
 interface IProps {
 	data: FeaturedInterface | null;
@@ -24,6 +25,7 @@ export const Featured = ({ data }: IProps): JSX.Element => {
 	const [cuisineFilter, setCuisineFilter] = useState("");
 	const [filterTags, setFilterTags] = useState<string[]>([]);
 	const [calFilter, setCalFilter] = useState<number | null>(null);
+	const [toast, setToast] = useState(false);
 	const [ingredientTags, setIngredientTags] = useState<IngredientTags[]>([]);
 	const [scrollTo, setScrollTo] = useState(false);
 	const dispatch = useAppDispatch();
@@ -60,6 +62,7 @@ export const Featured = ({ data }: IProps): JSX.Element => {
 					<img src={toTop} alt='up arrow' />
 					To Top
 				</button>
+				<Toast toast={toast} />
 				<Filter
 					cuisineFilter={cuisineFilter}
 					setCuisineFilter={setCuisineFilter}
@@ -179,7 +182,15 @@ export const Featured = ({ data }: IProps): JSX.Element => {
 										</div>
 										<div className='add-fav'>
 											<img src={star} alt='star' />
-											<p onClick={() => dispatch(addFavorite(recipe))}>
+											<p
+												onClick={() => {
+													dispatch(addFavorite(recipe));
+													setToast(true);
+													setTimeout(() => {
+														setToast(false);
+													}, 5000);
+												}}
+											>
 												Add To Favorites
 											</p>
 										</div>
