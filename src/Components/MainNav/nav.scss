@@ -1,0 +1,35 @@
+.nav-container {
+	height: auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 0 2rem;
+	background-color: #16facb;
+
+	& a {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		text-decoration: none;
+
+		& img {
+			height: 1rem;
+			width: auto;
+			margin-right: 0.5rem;
+			filter: invert(16%) sepia(76%) saturate(7361%) hue-rotate(349deg)
+				brightness(97%) contrast(103%);
+		}
+
+		& h4 {
+			font-size: 0.75rem;
+			font-size: bold;
+			color: #fa0922;
+		}
+
+		& h4:hover {
+			color: #ad0314;
+			font-weight: 500;
+		}
+	}
+}

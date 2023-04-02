@@ -1,0 +1,113 @@
+.card-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	.to-top-hidden {
+		display: none !important;
+	}
+
+	.to-top-button {
+		position: fixed;
+		bottom: 0;
+		right: 3rem;
+		display: flex !important;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		width: fit-content;
+		font-size: 1rem;
+		opacity: 0.5;
+		border-radius: 50%;
+		padding: 1rem 0.5rem;
+
+		& img {
+			height: 1rem;
+			width: auto;
+			margin-bottom: 0.5rem;
+		}
+	}
+
+	.card {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		margin-top: 2rem;
+
+		.inner-card {
+			width: 40rem;
+			margin: auto;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			border-bottom: 2px solid black;
+			padding-bottom: 2rem;
+
+			.header {
+				display: flex;
+				margin: auto;
+			}
+
+			.recipe-img-container {
+				height: 100%;
+				width: 22rem;
+
+				& img {
+					width: 100%;
+					height: auto;
+				}
+			}
+
+			.content {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+
+				.details {
+					text-align: left;
+					margin-left: 2rem;
+
+					& span {
+						font-weight: bold;
+					}
+				}
+			}
+
+			.add-fav {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				cursor: pointer;
+				font-weight: 500;
+
+				& img {
+					height: 1rem;
+					width: auto;
+					margin-right: 0.5rem;
+					filter: invert(71%) sepia(88%) saturate(637%) hue-rotate(0deg)
+						brightness(105%) contrast(103%);
+				}
+			}
+		}
+	}
+
+	& button {
+		margin: 4rem 0 3rem 0;
+		height: 4rem;
+		width: 20rem;
+		font-size: 2rem;
+		border: none;
+		background-color: rgba(26, 172, 141, 0.4);
+		border-radius: 0.5rem;
+		cursor: pointer;
+	}
+}
+
+@media only screen and (min-width: 1440px) {
+	.inner-card {
+		width: 40% !important;
+	}
+}

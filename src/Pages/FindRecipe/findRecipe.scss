@@ -1,0 +1,23 @@
+.find-content {
+	width: 80%;
+	height: auto;
+	margin: auto;
+
+	.loading,
+	.error {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		margin-top: 5rem;
+	}
+
+	.nothing-found {
+		display: flex;
+		justify-content: center;
+		margin-top: 5rem;
+
+		& h1 {
+			color: rgba($color: gray, $alpha: 0.7);
+		}
+	}
+}
