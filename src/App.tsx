@@ -55,8 +55,8 @@ function App() {
 					<Route path='lunch' element={<Lunch />} />
 					<Route path='dinner' element={<Dinner />} />
 				</Route>
-				<Route path='search/:label' element={<FindRecipe />} />
-				<Route path='favorites' element={<Favorites />} />
+				<Route path='recipe-app/search/:label' element={<FindRecipe />} />
+				<Route path='recipe-app/favorites' element={<Favorites />} />
 				<Route path='*' element={<PageNotFound />} />
 			</Routes>
 		</div>
