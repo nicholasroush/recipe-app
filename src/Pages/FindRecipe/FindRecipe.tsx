@@ -1,4 +1,4 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import "./findRecipe.scss";
 import "../../Components/Card/card.scss";
 import { IngredientTags } from "../../Components/Card/Card";
@@ -29,7 +29,6 @@ export const FindRecipe = (): JSX.Element => {
 	const [scrollTo, setScrollTo] = useState(false);
 	const dispatch = useAppDispatch();
 	const [toast, setToast] = useState(false);
-	const nav = useNavigate();
 	const { data, loading, error } = useFetch(url);
 	const nextPage = data.flat().at(-1)?._links.next.href;
 
@@ -117,7 +116,7 @@ export const FindRecipe = (): JSX.Element => {
 															return recipe;
 														}
 
-														return nav("*");
+														return null;
 													})
 													.filter(({ recipe }: any) => {
 														if (
