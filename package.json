@@ -1,7 +1,7 @@
 {
   "name": "recipes",
   "version": "0.1.0",
-  "homepage": "https://nicholasroush.github.io/recipe-app",
+  "homepage": "https://nicholasroush.github.io/recipe-app/",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.3",
