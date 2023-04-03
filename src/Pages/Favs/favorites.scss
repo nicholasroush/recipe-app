@@ -16,7 +16,7 @@
 	flex-wrap: wrap;
 
 	.favs-inner-card {
-		width: 40%;
+		width: 40rem;
 		margin: auto;
 		display: flex;
 		flex-direction: column;
@@ -49,6 +49,16 @@
 					font-weight: bold;
 				}
 			}
+
+			.recipe-img-container {
+				height: 100%;
+				width: 22rem;
+
+				& img {
+					width: 100%;
+					height: auto;
+				}
+			}
 		}
 
 		.remove-fav {
@@ -67,5 +77,11 @@
 					brightness(91%) contrast(123%);
 			}
 		}
+	}
+}
+
+@media only screen and (min-width: 1440px) {
+	.favs-inner-card {
+		width: 40% !important;
 	}
 }

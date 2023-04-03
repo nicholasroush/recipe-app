@@ -29,7 +29,7 @@ export const Favorites = (): JSX.Element => {
 										<h2>{val.favoriteData.label}</h2>
 									</div>
 									<div className='favs-content'>
-										<div>
+										<div className='recipe-img-container'>
 											<img
 												src={val.favoriteData.image}
 												alt={val.favoriteData.label}
