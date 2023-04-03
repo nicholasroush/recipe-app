@@ -48,7 +48,7 @@ function App() {
 				handleSearch={handleSearch}
 			/>
 			<Routes>
-				<Route path='/' element={<Home />}>
+				<Route path='recipe-app/' element={<Home />}>
 					<Route index element={<Navigate to='featured' />} />
 					<Route path='featured' element={<Featured data={featureData} />} />
 					<Route path='breakfast' element={<Breakfast />} />
