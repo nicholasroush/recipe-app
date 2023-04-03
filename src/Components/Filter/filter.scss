@@ -298,12 +298,16 @@
 		}
 
 		.filter-checks-open {
-			width: 55rem !important;
+			width: 32rem !important;
 			font-size: 8px;
 
 			& input {
 				width: fit-content !important;
 			}
+		}
+
+		.with-margin {
+			margin-top: 7rem !important;
 		}
 	}
 }
