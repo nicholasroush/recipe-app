@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/recipe-app/static/css/main.33b97850.css",
-    "main.js": "/recipe-app/static/js/main.e3da3166.js",
-    "static/js/787.3e22468a.chunk.js": "/recipe-app/static/js/787.3e22468a.chunk.js",
-    "static/media/search-bg.jpg": "/recipe-app/static/media/search-bg.bf18810488750d379822.jpg",
-    "static/media/logo.png": "/recipe-app/static/media/logo.6b66d2be5fc4ce2f0b49.png",
-    "static/media/pagenotfound-img.png": "/recipe-app/static/media/pagenotfound-img.e68898199361acde37c1.png",
-    "static/media/magnifying-glass.png": "/recipe-app/static/media/magnifying-glass.6700853d5e31f8d50876.png",
-    "index.html": "/recipe-app/index.html",
-    "static/media/close.svg": "/recipe-app/static/media/close.52ce96564c4c4b31dbc52cbb8201fa79.svg",
-    "static/media/arrow-circle-up-solid.svg": "/recipe-app/static/media/arrow-circle-up-solid.eb034c6c8bfcf03e6f243677e356b229.svg",
-    "static/media/chevron-down-solid.svg": "/recipe-app/static/media/chevron-down-solid.bba296b719107cbbdd4bcf4a7aec4e0c.svg",
-    "static/media/check-solid.svg": "/recipe-app/static/media/check-solid.c5fdcfa474f07e3a788ee2b855020cba.svg",
-    "static/media/star-solid.svg": "/recipe-app/static/media/star-solid.9f82a14df1ad408572a9524751c3fe8e.svg",
-    "static/media/trash-solid.svg": "/recipe-app/static/media/trash-solid.fefb29412fe355cc303c543c2462d02e.svg",
-    "main.33b97850.css.map": "/recipe-app/static/css/main.33b97850.css.map",
-    "main.e3da3166.js.map": "/recipe-app/static/js/main.e3da3166.js.map",
-    "787.3e22468a.chunk.js.map": "/recipe-app/static/js/787.3e22468a.chunk.js.map"
+    "main.css": "/static/css/main.17514c40.css",
+    "main.js": "/static/js/main.56ec9ab8.js",
+    "static/js/787.3e22468a.chunk.js": "/static/js/787.3e22468a.chunk.js",
+    "static/media/search-bg.jpg": "/static/media/search-bg.bf18810488750d379822.jpg",
+    "static/media/logo.png": "/static/media/logo.6b66d2be5fc4ce2f0b49.png",
+    "static/media/pagenotfound-img.png": "/static/media/pagenotfound-img.e68898199361acde37c1.png",
+    "static/media/magnifying-glass.png": "/static/media/magnifying-glass.6700853d5e31f8d50876.png",
+    "static/media/close.svg": "/static/media/close.52ce96564c4c4b31dbc52cbb8201fa79.svg",
+    "index.html": "/index.html",
+    "static/media/arrow-circle-up-solid.svg": "/static/media/arrow-circle-up-solid.eb034c6c8bfcf03e6f243677e356b229.svg",
+    "static/media/chevron-down-solid.svg": "/static/media/chevron-down-solid.bba296b719107cbbdd4bcf4a7aec4e0c.svg",
+    "static/media/check-solid.svg": "/static/media/check-solid.c5fdcfa474f07e3a788ee2b855020cba.svg",
+    "static/media/star-solid.svg": "/static/media/star-solid.9f82a14df1ad408572a9524751c3fe8e.svg",
+    "static/media/trash-solid.svg": "/static/media/trash-solid.fefb29412fe355cc303c543c2462d02e.svg",
+    "main.17514c40.css.map": "/static/css/main.17514c40.css.map",
+    "main.56ec9ab8.js.map": "/static/js/main.56ec9ab8.js.map",
+    "787.3e22468a.chunk.js.map": "/static/js/787.3e22468a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.33b97850.css",
-    "static/js/main.e3da3166.js"
+    "static/css/main.17514c40.css",
+    "static/js/main.56ec9ab8.js"
   ]
 }
