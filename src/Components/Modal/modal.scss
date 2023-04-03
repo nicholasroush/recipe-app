@@ -184,3 +184,18 @@
 		}
 	}
 }
+
+@media only screen and (max-width: 600px) {
+	.box {
+		width: 90% !important;
+		height: 90% !important;
+	}
+
+	.ingredients-container {
+		justify-content: center !important;
+
+		.ingredients {
+			width: 80% !important;
+		}
+	}
+}

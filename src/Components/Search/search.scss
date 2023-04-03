@@ -80,3 +80,16 @@
 .img-container:hover {
 	cursor: pointer;
 }
+
+@media only screen and (max-width: 600px) {
+	.search-bar {
+		& img {
+			height: 2rem;
+			width: 2rem;
+		}
+
+		& input {
+			width: 30rem !important;
+		}
+	}
+}
