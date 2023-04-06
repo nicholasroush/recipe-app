@@ -11,6 +11,7 @@ import { Filter } from "../Filter/Filter";
 import { Spinner } from "../Spinner/Spinner";
 import toTop from "../../Assets/arrow-circle-up-solid.svg";
 import { Toast } from "../Toast/Toast";
+import { useAppSelector } from "../../Utilities/Hooks/useSelector";
 
 interface IProps {
 	data: IFetchProps[];
@@ -35,6 +36,26 @@ export const Card = ({ data, loading, error, setUrl }: IProps): JSX.Element => {
 	const [toast, setToast] = useState(false);
 	const dispatch = useAppDispatch();
 	const nextPage = data.flat().at(-1)?._links.next.href;
+
+	const favs = useAppSelector((state) => state.storeFavorites.data);
+
+	const handleAddFav = (label: string, recipe: any) => {
+		if (
+			favs
+				.map((val: any) => {
+					return val.favoriteData.label;
+				})
+				.includes(label)
+		) {
+			return alert("Recipe already added to favorites");
+		} else {
+			dispatch(addFavorite(recipe));
+			setToast(true);
+			setTimeout(() => {
+				setToast(false);
+			}, 5000);
+		}
+	};
 
 	const toggleScroll = () => {
 		const scrolled =
@@ -200,11 +221,7 @@ export const Card = ({ data, loading, error, setUrl }: IProps): JSX.Element => {
 														<img src={star} alt='star' />
 														<p
 															onClick={() => {
-																dispatch(addFavorite(recipe));
-																setToast(true);
-																setTimeout(() => {
-																	setToast(false);
-																}, 5000);
+																handleAddFav(recipe.label, recipe);
 															}}
 														>
 															Add To Favorites

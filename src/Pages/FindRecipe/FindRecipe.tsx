@@ -13,6 +13,7 @@ import { addFavorite } from "../../Utilities/Store/Slices/favoriteRecipesSlice";
 import { useAppDispatch } from "../../Utilities/Hooks/useDispatch";
 import toTop from "../../Assets/arrow-circle-up-solid.svg";
 import star from "../../Assets/star-solid.svg";
+import { useAppSelector } from "../../Utilities/Hooks/useSelector";
 
 const appId = process.env.REACT_APP_ID;
 const appKey = process.env.REACT_APP_KEY;
@@ -31,6 +32,26 @@ export const FindRecipe = (): JSX.Element => {
 	const [toast, setToast] = useState(false);
 	const { data, loading, error } = useFetch(url);
 	const nextPage = data.flat().at(-1)?._links.next.href;
+
+	const favs = useAppSelector((state) => state.storeFavorites.data);
+
+	const handleAddFav = (label: string, recipe: any) => {
+		if (
+			favs
+				.map((val: any) => {
+					return val.favoriteData.label;
+				})
+				.includes(label)
+		) {
+			return alert("Recipe already added to favorites");
+		} else {
+			dispatch(addFavorite(recipe));
+			setToast(true);
+			setTimeout(() => {
+				setToast(false);
+			}, 5000);
+		}
+	};
 
 	useEffect(() => {
 		setUrl(
@@ -223,11 +244,7 @@ export const FindRecipe = (): JSX.Element => {
 																	<img src={star} alt='star' />
 																	<p
 																		onClick={() => {
-																			dispatch(addFavorite(recipe));
-																			setToast(true);
-																			setTimeout(() => {
-																				setToast(false);
-																			}, 5000);
+																			handleAddFav(recipe.label, recipe);
 																		}}
 																	>
 																		Add To Favorites

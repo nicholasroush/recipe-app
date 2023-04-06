@@ -34,6 +34,26 @@ export const Featured = ({ data }: IProps): JSX.Element => {
 	);
 	const error = useAppSelector((state: RootState) => state.storeFeatured.error);
 
+	const favs = useAppSelector((state) => state.storeFavorites.data);
+
+	const handleAddFav = (label: string, recipe: any) => {
+		if (
+			favs
+				.map((val: any) => {
+					return val.favoriteData.label;
+				})
+				.includes(label)
+		) {
+			return alert("Recipe already added to favorites");
+		} else {
+			dispatch(addFavorite(recipe));
+			setToast(true);
+			setTimeout(() => {
+				setToast(false);
+			}, 5000);
+		}
+	};
+
 	const toggleScroll = () => {
 		const scrolled = document.documentElement.scrollTop;
 		if (scrolled > 900) {
@@ -184,11 +204,7 @@ export const Featured = ({ data }: IProps): JSX.Element => {
 											<img src={star} alt='star' />
 											<p
 												onClick={() => {
-													dispatch(addFavorite(recipe));
-													setToast(true);
-													setTimeout(() => {
-														setToast(false);
-													}, 5000);
+													handleAddFav(recipe.label, recipe);
 												}}
 											>
 												Add To Favorites
