@@ -257,7 +257,7 @@ export const FindRecipe = (): JSX.Element => {
 										);
 									})}
 							</div>
-							{data && (
+							{data.map((val) => val._links.next) && (
 								<button onClick={() => setUrl(nextPage)}>Load More</button>
 							)}
 						</div>

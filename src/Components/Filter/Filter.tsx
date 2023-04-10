@@ -137,6 +137,7 @@ export const Filter = ({
 						onKeyDown={handleIngredientFilter}
 						placeholder='Example: Chicken'
 						className={ingredientOpen ? "ingredient-open" : "ingredient-closed"}
+						enterKeyHint='done'
 					/>
 				</div>
 				<div className='checkbox-content'>
@@ -222,6 +223,7 @@ export const Filter = ({
 						onKeyDown={handleCusineFilter}
 						placeholder='Example: Indian'
 						className={cuisineOpen ? "cuisine-open" : "cuisine-closed"}
+						enterKeyHint='done'
 					/>
 				</div>
 			</div>

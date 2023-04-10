@@ -51,6 +51,7 @@ export const Search = ({
 						}}
 						onKeyDown={handleSearch}
 						placeholder='Search Food or Dish'
+						enterKeyHint='done'
 					/>
 				</div>
 			</div>
