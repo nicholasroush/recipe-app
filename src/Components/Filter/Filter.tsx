@@ -112,14 +112,16 @@ export const Filter = ({
 
 	return (
 		<div className='filter-content'>
-			<h2 onClick={() => setFilterOpen(!filterOpen)}>
-				Filter By{" "}
-				<img
-					src={arrow}
-					alt='arrow'
-					className={filterOpen ? "img-rotate" : ""}
-				/>
-			</h2>
+			<div className='filter-by'>
+				<h2 onClick={() => setFilterOpen(!filterOpen)}>
+					Filter By{" "}
+					<img
+						src={arrow}
+						alt='arrow'
+						className={filterOpen ? "img-rotate" : ""}
+					/>
+				</h2>
+			</div>
 			<div className={filterOpen ? "filter-fields" : "filters-closed"}>
 				<div className='ingredient-input'>
 					<p onClick={handleIngredientAnimate}>
